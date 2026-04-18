@@ -1,4 +1,4 @@
-const API_BASE = 'https://YOUR-BACKEND-URL.example.com';
+const API_BASE = 'https://cosmic-sites1.onrender.com/';
 
 const form = document.getElementById('messageForm');
 const nameInput = document.getElementById('name');
