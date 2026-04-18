@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmic Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+
+  <main class="container">
+    <section class="panel glass">
+      <div class="badge">COSMIC TRANSMISSION</div>
+      <h1>Отправка сообщения</h1>
+      <p class="subtitle">Космический интерфейс для отправки имени и большого текста до 9000 символов.</p>
+
+      <form id="messageForm" class="form" novalidate>
+        <label for="name">Имя</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          maxlength="120"
+          placeholder="Введите имя"
+          autocomplete="name"
+          required
+        />
+
+        <div class="label-row">
+          <label for="message">Текст сообщения</label>
+          <span id="counter">0 / 9000</span>
+        </div>
+
+        <textarea
+          id="message"
+          name="message"
+          maxlength="9000"
+          placeholder="Введите большой текст..."
+          required
+        ></textarea>
+
+        <button type="submit" id="submitBtn">Отправить</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

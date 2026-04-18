@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmic Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+
+  <main class="container">
+    <section class="panel glass admin-panel">
+      <div class="badge">ADMIN CONSOLE</div>
+      <h1>Просмотр заявок</h1>
+      <p class="subtitle">Доступ только по паролю через сервер. Пароль не хранится в коде страницы.</p>
+
+      <form id="loginForm" class="form compact">
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" placeholder="Введите пароль" required />
+        <button type="submit">Войти</button>
+      </form>
+
+      <div class="toolbar hidden" id="toolbar">
+        <button id="refreshBtn" type="button">Обновить</button>
+        <button id="logoutBtn" type="button" class="secondary">Выйти</button>
+      </div>
+
+      <p id="adminStatus" class="status" aria-live="polite"></p>
+      <div id="entries" class="entries"></div>
+    </section>
+  </main>
+
+  <script src="./admin.js"></script>
+</body>
+</html>
